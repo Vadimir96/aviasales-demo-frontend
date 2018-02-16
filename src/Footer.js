@@ -1,11 +1,6 @@
 import styled from "styled-components";
-import roboto from "./fonts/Roboto-Regular.ttf";
 
 export const Footer = styled.div`
-  @font-face {
-    font-family: "Roboto-Regular";
-    src: url(${roboto});
-  }
   background-color: white;
 `;
 export const Footer_top = styled.div`
@@ -14,16 +9,25 @@ export const Footer_top = styled.div`
   flex-flow: row wrap;
   border-bottom: 1px solid #e0e6e8;
   box-sizing: border-box;
+  @media (min-width: 768px) {
+    padding: 1px 11px 24px 11px;
+  }
 `;
 
 export const Footer_top_block = styled.div`
   flex: 1 50%;
   display: flex;
   flex-direction: column;
+  @media (min-width: 768px) {
+    flex: 1 25%;
+    &:last-child {
+      flex: 1 75%;
+    }
+  }
 `;
 
 export const Footer_top_block_name = styled.h1`
-  font-family: "Roboto-Regular";
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
   line-height: 16px;
@@ -35,7 +39,7 @@ export const Footer_top_block_name = styled.h1`
 `;
 
 export const Footer_top_block_element = styled.a`
-  font-family: "Roboto-Regular";
+  font-family: "Roboto";
   font-style: normal;
   font-weight: normal;
   line-height: 16px;

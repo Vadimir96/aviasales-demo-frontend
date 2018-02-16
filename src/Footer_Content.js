@@ -1,14 +1,12 @@
 import styled from "styled-components";
-import roboto from "./fonts/Roboto-Regular.ttf";
 
 export const Footer_block = styled.div`
   background: #ffffff;
   padding: 24px 6px 24px 6px;
-  @font-face {
-    font-family: "Roboto-Regular";
-    src: url(${roboto});
+  font-family: "Roboto";
+  @media (min-width: 768px) {
+    padding: 24px 11px 24px 11px;
   }
-  font-family: "Roboto-Regular";
 `;
 
 export const Footer_Content = styled.div``;
@@ -22,6 +20,12 @@ export const Footer_Content_List = styled.ul`
     props.links
       ? "margin-right: 50px;color: #5b5b5c;"
       : "color: #4A4A4A;display: flex; flex-flow: row wrap; justify-content: space-between; "};
+  @media (min-width: 768px) {
+    ${props =>
+      props.links
+        ? "margin-right: 50px;color: #5b5b5c;"
+        : "color: #4A4A4A;display: flex; flex-flow: row wrap; justify-content: flex-start; "};
+  }
 `;
 export const Footer_Content_List_Element = styled.li`
   display: inline-block;
@@ -29,6 +33,12 @@ export const Footer_Content_List_Element = styled.li`
   line-height: 16px;
   ${props =>
     props.social ? "padding-bottom:12px;margin-right:0px; flex: 1 0 33%" : ""};
+
+  @media (min-width: 768px) {
+    margin-right: 10px;
+    ${props =>
+      props.social ? "padding-bottom:12px;margin-right:35px; flex: none" : ""};
+  }
 `;
 export const Footer_Content_Link = styled.a`
   font-size: 12px;
@@ -36,6 +46,9 @@ export const Footer_Content_Link = styled.a`
 export const Footer_Content_Hotels = styled.div`
   text-align: center;
   padding-top: 12px;
+  @media (min-width: 768px) {
+    text-align: left;
+  }
 `;
 export const Footer_Content_Img = styled.img`
   margin-right: 4px;
@@ -47,12 +60,21 @@ export const Footer_Content_Link_Buttons_Block = styled.div`
   margin-bottom: 24px;
   display: flex;
   flex-direction: column;
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
 `;
 
 export const Footer_Content_Link_Button = Footer_Content_Link.extend`
-  /*padding: 5px 10px 5px 10px;*/
   display: block;
   margin: 5px auto;
+  @media (min-width: 768px) {
+    margin: 5px 10px;
+    &:last-child,
+    &:first-child {
+      margin: 5px 0;
+    }
+  }
 `;
 
 export const Footer_Content_Link_Buttons_Block_Inside = styled.div`
@@ -100,4 +122,7 @@ export const Footer_Content_end = styled.h1`
 
   color: #5b5b5c;
   text-align: center;
+  @media (min-width: 768px) {
+    text-align: left;
+  }
 `;

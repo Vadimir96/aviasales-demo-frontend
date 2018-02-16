@@ -1,12 +1,10 @@
 import styled from "styled-components";
-import roboto from "./fonts/Roboto-Regular.ttf";
 
 export const Paragraph_block = styled.div`
   background: #ffffff;
   padding: 30px 6px 10px;
-  @font-face {
-    font-family: "Roboto-Regular";
-    src: url(${roboto});
+  @media (min-width: 768px) {
+    padding: 30px 8px 48px;
   }
 `;
 export const Paragraph_Text = styled.div``;

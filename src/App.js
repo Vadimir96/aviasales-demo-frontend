@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "flexboxgrid2";
 import styled from "styled-components";
-import logo from "./images/logo.svg";
+
 import plane from "./images/aero-2.svg";
 import calendarprice from "./images/calendar-prices.svg";
 import russ from "./images/rus.svg";
@@ -16,6 +16,7 @@ import cart from "./images/Shopping_cart.svg";
 import culture from "./images/Culture.svg";
 import coctail from "./images/Coctail.svg";
 import child from "./images/Child_car.svg";
+import bars from "./images/bars.svg";
 import rect_pop from "./images/Rectangle2.svg";
 import pop_bg_1 from "./images/backgroundImage-2.png";
 import pop_bg_2 from "./images/backgroundImage-6.png";
@@ -23,6 +24,19 @@ import pop_bg_3 from "./images/backgroundImage-12.png";
 import pop_bg_4 from "./images/backgroundImage-3.png";
 import pop_bg_5 from "./images/backgroundImage-9.png";
 import pop_bg_6 from "./images/Group 10.png";
+
+import SlideFirm1 from "./images/SlideFirm1.svg";
+import SlideFirm2 from "./images/SlideFirm2.svg";
+import SlideFirm3 from "./images/SlideFirm3.svg";
+import SlideFirm4 from "./images/SlideFirm4.svg";
+import SlideFirm5 from "./images/SlideFirm5.svg";
+import LeftSlide from "./images/LeftSlide.svg";
+import RightSlide from "./images/RightSlide.svg";
+
+import twitdispatch from "./images/twitdispatch.svg";
+import facedispatch from "./images/facedispatch.svg";
+import vkdispatch from "./images/vkdispatch.svg";
+import invdispatch from "./images/invdispatch.svg";
 
 import icoplane from "./images/icoplane.svg";
 import icoemail from "./images/icoemail.svg";
@@ -33,6 +47,9 @@ import lufthansa from "./images/img.png";
 import lufthansa_logo from "./images/img-1.png";
 
 import phone from "./images/Phone.svg";
+import phoneSmall from "./images/phone320.png";
+import phoneMedium from "./images/phone768.png";
+import phoneLarge from "./images/phone1440.png";
 import star from "./images/star.svg";
 import appleico from "./images/appleicon.svg";
 import androidico from "./images/androidicon.svg";
@@ -50,11 +67,16 @@ import win_logo_icon from "./images/Win_Link_Logo.svg";
 import {
   Aviasales,
   Bg,
+  LogoLink,
   Logo,
   Text,
+  Date,
   Form_block,
   Info_block,
   Formgroup,
+  FormCountry,
+  FormDate,
+  FormTickt,
   Textfield,
   Сountrytype,
   Swaparrows,
@@ -73,12 +95,16 @@ import {
   List,
   List_unit,
   List_div,
+  FondCompass,
   List_img,
   List_text,
   Underline,
   Cardholder,
   Card,
   PopCityImg,
+  PopDirectionFlag,
+  PopDirectionImage,
+  PopDirectionCountry,
   PopCityName,
   PopCityCountry,
   PopCityPrice,
@@ -107,6 +133,34 @@ import {
   MainText,
   LittleText
 } from "./Best_Prices_month.js";
+
+import {
+  AirlinesMain,
+  AirlinesBlock,
+  AirlinesHeader,
+  AirlinesBlockContent,
+  AirlinesSlideOne,
+  AirlinesSlideNav,
+  AirlinesSlideNavOl,
+  AirlinesSlideDirection,
+  AirlinesSlideLogotypes
+} from "./Cheap_Airlines.js";
+
+import {
+  MainDispatch,
+  DispatchBlock,
+  DispatchTextBlock,
+  DispatchHeader,
+  DispatchTextwishes,
+  DispatchList,
+  DispatchListSocial,
+  DispatchListSocialLink,
+  DispatchListSocialLinkImg,
+  DispatchSendBlock,
+  DispatchField,
+  DispatchForm,
+  DispatchFormButton
+} from "./Dispatch.js";
 
 import {
   Sp_off,
@@ -186,40 +240,46 @@ class App extends Component {
     return (
       <Aviasales>
         <Bg>
-          <Logo src={logo} alt="logo" />
+          <LogoLink>
+            <Logo>aviasales</Logo>
+          </LogoLink>
           <Text>Поиск дешевых авиабилетов</Text>
           <Form_block>
             <Info_block>
-              <Formgroup bigger>
+              <FormCountry city>
                 <Textfield top placeholder="Город отправления" />
                 <Сountrytype>MOW</Сountrytype>
                 <Swaparrows />
-              </Formgroup>
-              <Formgroup bigger>
+              </FormCountry>
+              <Formgroup city>
                 <Textfield placeholder="Город прибытия" />
               </Formgroup>
-              <Formgroup smaller>
-                <Calendar_block />
-                <Textfield placeholder="Туда" />
-              </Formgroup>
-              <Formgroup>
-                <Calendar_block />
-                <Textfield placeholder="Обратно" calendar />
-              </Formgroup>
-              <Formgroup bigger>
+              <Date>
+                <FormDate date>
+                  <Calendar_block />
+                  <Textfield placeholder="Туда" />
+                </FormDate>
+                <FormDate>
+                  <Calendar_block />
+                  <Textfield placeholder="Обратно" calendar />
+                </FormDate>
+              </Date>
+              <FormTickt city>
                 <Passangerinfo>
                   1 пассажир,
                   <Ticketstype> эконом</Ticketstype>
                 </Passangerinfo>
-              </Formgroup>
-              <Formgroup bigger>
+              </FormTickt>
+              <Formgroup city center>
                 <Flightbutton>Найти билеты</Flightbutton>
               </Formgroup>
             </Info_block>
           </Form_block>
         </Bg>
         <Pop_dir>
-          <Compass src={compass} alt="logo" />
+          <FondCompass>
+            <Compass src={compass} alt="logo" />
+          </FondCompass>
           <PD_title>
             Популярные направления перелетов из города<City_name>
               Москва <Pencil src={pencil} alt="logo" />
@@ -269,8 +329,13 @@ class App extends Component {
               <PopCityImg src={pop_bg_1} alt="logo" />
               <PopDirectionFooter>
                 <PopDirectionBlock>
-                  <PopCityName>Краснодар</PopCityName>
-                  <PopCityCountry>РОССИЯ</PopCityCountry>
+                  <PopDirectionFlag>
+                    <PopDirectionImage src={russ} />
+                  </PopDirectionFlag>
+                  <PopDirectionCountry>
+                    <PopCityName>Краснодар</PopCityName>
+                    <PopCityCountry>РОССИЯ</PopCityCountry>
+                  </PopDirectionCountry>
                 </PopDirectionBlock>
                 <PopInfoBlock>
                   <PopCityPrice>Найти от 1 212Р</PopCityPrice>
@@ -282,8 +347,13 @@ class App extends Component {
               <PopCityImg src={pop_bg_2} alt="logo" />
               <PopDirectionFooter>
                 <PopDirectionBlock>
-                  <PopCityName>Сочи (Адлер)</PopCityName>
-                  <PopCityCountry>РОССИЯ</PopCityCountry>
+                  <PopDirectionFlag>
+                    <PopDirectionImage src={russ} />
+                  </PopDirectionFlag>
+                  <PopDirectionCountry>
+                    <PopCityName>Сочи (Адлер)</PopCityName>
+                    <PopCityCountry>РОССИЯ</PopCityCountry>
+                  </PopDirectionCountry>
                 </PopDirectionBlock>
                 <PopInfoBlock>
                   <PopCityPrice>Найти от 1 334Р</PopCityPrice>
@@ -295,8 +365,13 @@ class App extends Component {
               <PopCityImg src={pop_bg_3} alt="logo" />
               <PopDirectionFooter>
                 <PopDirectionBlock>
-                  <PopCityName>Санкт-Петербург</PopCityName>
-                  <PopCityCountry>РОССИЯ</PopCityCountry>
+                  <PopDirectionFlag>
+                    <PopDirectionImage src={russ} />
+                  </PopDirectionFlag>
+                  <PopDirectionCountry>
+                    <PopCityName>Санкт-Петербург</PopCityName>
+                    <PopCityCountry>РОССИЯ</PopCityCountry>
+                  </PopDirectionCountry>
                 </PopDirectionBlock>
                 <PopInfoBlock>
                   <PopCityPrice>Найти от 1 508Р</PopCityPrice>
@@ -308,8 +383,13 @@ class App extends Component {
               <PopCityImg src={pop_bg_4} alt="logo" />
               <PopDirectionFooter>
                 <PopDirectionBlock>
-                  <PopCityName>Минеральные Воды</PopCityName>
-                  <PopCityCountry>РОССИЯ</PopCityCountry>
+                  <PopDirectionFlag>
+                    <PopDirectionImage src={russ} />
+                  </PopDirectionFlag>
+                  <PopDirectionCountry>
+                    <PopCityName>Минеральные Воды</PopCityName>
+                    <PopCityCountry>РОССИЯ</PopCityCountry>
+                  </PopDirectionCountry>
                 </PopDirectionBlock>
                 <PopInfoBlock>
                   <PopCityPrice>Найти от 2 074Р</PopCityPrice>
@@ -321,8 +401,13 @@ class App extends Component {
               <PopCityImg src={pop_bg_5} alt="logo" />
               <PopDirectionFooter>
                 <PopDirectionBlock>
-                  <PopCityName>Симферополь (Кр..</PopCityName>
-                  <PopCityCountry>КРЫМ</PopCityCountry>
+                  <PopDirectionFlag>
+                    <PopDirectionImage src={russ} />
+                  </PopDirectionFlag>
+                  <PopDirectionCountry>
+                    <PopCityName>Симферополь (Крым)</PopCityName>
+                    <PopCityCountry>КРЫМ</PopCityCountry>
+                  </PopDirectionCountry>
                 </PopDirectionBlock>
                 <PopInfoBlock>
                   <PopCityPrice>Найти от 2 407Р</PopCityPrice>
@@ -334,8 +419,13 @@ class App extends Component {
               <PopCityImg src={pop_bg_6} alt="logo" />
               <PopDirectionFooter>
                 <PopDirectionBlock>
-                  <PopCityName>Барселона</PopCityName>
-                  <PopCityCountry>ИСПАНИЯ</PopCityCountry>
+                  <PopDirectionFlag>
+                    <PopDirectionImage src={bars} />
+                  </PopDirectionFlag>
+                  <PopDirectionCountry>
+                    <PopCityName>Барселона</PopCityName>
+                    <PopCityCountry>ИСПАНИЯ</PopCityCountry>
+                  </PopDirectionCountry>
                 </PopDirectionBlock>
                 <PopInfoBlock>
                   <PopCityPrice>Найти от 4 247Р</PopCityPrice>
@@ -463,6 +553,73 @@ class App extends Component {
             офертой.
           </LittleText>
         </Best_Prices>
+
+        <AirlinesMain>
+          <AirlinesBlock>
+            <AirlinesSlideDirection src={LeftSlide} alt="left" direction />
+            <AirlinesHeader>
+              Дешевые авиабилеты от крупнейших авиакомпаний и агентств
+            </AirlinesHeader>
+            <AirlinesSlideDirection src={RightSlide} alt="right" />
+            <AirlinesBlockContent>
+              <AirlinesSlideOne>
+                <AirlinesSlideLogotypes src={SlideFirm1} alt="SlideFirm" />
+                <AirlinesSlideLogotypes src={SlideFirm2} alt="SlideFirm" />
+                <AirlinesSlideLogotypes src={SlideFirm3} alt="SlideFirm" />
+                <AirlinesSlideLogotypes src={SlideFirm4} alt="SlideFirm" />
+                <AirlinesSlideLogotypes src={SlideFirm5} alt="SlideFirm" />
+              </AirlinesSlideOne>
+              <AirlinesSlideNav>
+                <AirlinesSlideNavOl active />
+                <AirlinesSlideNavOl />
+                <AirlinesSlideNavOl />
+              </AirlinesSlideNav>
+            </AirlinesBlockContent>
+          </AirlinesBlock>
+        </AirlinesMain>
+
+        <MainDispatch>
+          <DispatchBlock>
+            <DispatchTextBlock>
+              <DispatchHeader>
+                Хотите знать всё о скидках на авиабилеты?
+              </DispatchHeader>
+              <DispatchTextwishes>
+                Вы можете подписаться на нашу рассылку через соцсети или по
+                электронной почте.
+              </DispatchTextwishes>
+            </DispatchTextBlock>
+            <DispatchList>
+              <DispatchListSocial>
+                <DispatchListSocialLink>
+                  <DispatchListSocialLinkImg src={twitdispatch} />
+                </DispatchListSocialLink>
+              </DispatchListSocial>
+              <DispatchListSocial>
+                <DispatchListSocialLink>
+                  <DispatchListSocialLinkImg src={facedispatch} />
+                </DispatchListSocialLink>
+              </DispatchListSocial>
+              <DispatchListSocial>
+                <DispatchListSocialLink>
+                  <DispatchListSocialLinkImg src={vkdispatch} />
+                </DispatchListSocialLink>
+              </DispatchListSocial>
+              <DispatchListSocial>
+                <DispatchListSocialLink>
+                  <DispatchListSocialLinkImg src={invdispatch} />
+                </DispatchListSocialLink>
+              </DispatchListSocial>
+            </DispatchList>
+            <DispatchSendBlock>
+              <DispatchForm>
+                <DispatchField placeholder="Ваш email" />
+                <DispatchFormButton>Подписаться</DispatchFormButton>
+              </DispatchForm>
+            </DispatchSendBlock>
+          </DispatchBlock>
+        </MainDispatch>
+
         <Sp_off>
           <Sp_off_h_text>Спецпредложения на&nbsp;авиабилеты</Sp_off_h_text>
           <Sp_off_cardholder>
@@ -619,7 +776,6 @@ class App extends Component {
         </Paragraph_block>
         <Application_block>
           <ApplicationInd>
-            <ApplicationPhone src={phone} alt="Phone" />
             <ApplicationContent>
               <ApplicatioText>
                 Скачай мобильное приложение Aviasales.ru
