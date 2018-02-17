@@ -17,7 +17,7 @@ export const Compass = styled.img`
   display: flex;
   margin: 0px auto;
 `;
-export const PD_title = styled.p`
+export const InviteText = styled.p`
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
@@ -28,7 +28,7 @@ export const PD_title = styled.p`
   padding: 2px 20px 0px 20px;
   color: #4a4a4a;
 `;
-export const City_name = PD_title.extend`
+export const CityName = InviteText.extend`
   color: #00ace2;
   padding-top: 0px;
   margin-top: 0px;

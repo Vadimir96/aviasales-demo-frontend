@@ -13,7 +13,7 @@ export const PopularCountries = styled.div`
     justify-content: space-between;
   }
 `;
-export const Offers = styled.div`
+export const Offer = styled.div`
   display: flex;
   flex-flow: column wrap;
   justify-content: space-around;
@@ -33,9 +33,9 @@ export const Calendar = styled.div`
   margin-bottom: 20px;
   text-align: center;
 `;
-export const Calendaricon = styled.img``;
+export const CalendarIcon = styled.img``;
 
-export const Calendarheader = styled.p`
+export const CalendarHeader = styled.p`
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   line-height: 24px;
@@ -50,21 +50,20 @@ export const Calendarheader = styled.p`
     font-size: 24px;
   }
 `;
-export const Countryblock = styled.div``;
-export const Country_Prices = styled.div`
+export const DirectionDescription = styled.div`
   margin-bottom: 24px;
 `;
-export const Flags = styled.img``;
+export const FlagImage = styled.img``;
 export const Flag = styled.div`
   display: inline-block;
   width: 40px;
   margin-right: 5px;
   box-sizing: border-box;
 `;
-export const Country_Text = styled.div`
+export const Direction = styled.div`
   display: inline-block;
 `;
-export const Town_Text = styled.p`
+export const CityName = styled.p`
   font-weight: bold;
   font-family: "Roboto", sans-serif;
   line-height: 32px;
@@ -72,7 +71,7 @@ export const Town_Text = styled.p`
   margin: 0;
   color: #5b5b5c;
 `;
-export const CountryText = styled.p`
+export const CountryName = styled.p`
   font-weight: 500;
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
@@ -82,7 +81,7 @@ export const CountryText = styled.p`
   color: #a0b0b9;
 `;
 
-export const FlightOrigins = styled.div``;
+export const FlightOriginsList = styled.div``;
 export const ListElement = styled.div`
   display: flex;
   flex-wrap: nowrap;
@@ -99,7 +98,7 @@ export const DetailsElement = styled.a`
   font-size: 16px;
   text-decoration: none;
 `;
-export const MainText = styled.p`
+export const CheapTickets = styled.p`
   font-family: "Roboto", sans-serif;
   line-height: 24px;
   font-size: 16px;
@@ -114,7 +113,7 @@ export const MainText = styled.p`
     margin: 80px auto 0;
   }
 `;
-export const LittleText = styled.p`
+export const OfferWarning = styled.p`
   font-family: "Roboto", sans-serif;
   line-height: 20px;
   font-size: 14px;

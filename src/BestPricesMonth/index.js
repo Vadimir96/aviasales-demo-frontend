@@ -7,45 +7,44 @@ import mol from "./mol.svg";
 import {
   Container,
   PopularCountries,
-  Offers,
+  Offer,
   Calendar,
-  Calendaricon,
-  Calendarheader,
-  Countryblock,
-  Country_Prices,
-  Flags,
+  CalendarIcon,
+  CalendarHeader,
+  DirectionDescription,
+  FlagImage,
   Flag,
-  Country_Text,
-  Town_Text,
-  CountryText,
-  FlightOrigins,
+  Direction,
+  CityName,
+  CountryName,
+  FlightOriginsList,
   ListElement,
   DetailsElement,
-  MainText,
-  LittleText
+  CheapTickets,
+  OfferWarning
 } from "./styled";
 
 export default () => (
   <Container>
     <div className="container">
       <Calendar>
-        <Calendaricon src={calendarprice} alt="calendar" />
+        <CalendarIcon src={calendarprice} alt="calendar" />
       </Calendar>
-      <Calendarheader>
+      <CalendarHeader>
         Лучшие цены на авиабилеты за последний месяц
-      </Calendarheader>
+      </CalendarHeader>
       <PopularCountries>
-        <Offers>
-          <Country_Prices>
+        <Offer>
+          <DirectionDescription>
             <Flag>
-              <Flags src={russ} alt="calendar" />
+              <FlagImage src={russ} alt="calendar" />
             </Flag>
-            <Country_Text>
-              <Town_Text>Симферополь (Крым)</Town_Text>
-              <CountryText>Крым</CountryText>
-            </Country_Text>
-          </Country_Prices>
-          <FlightOrigins>
+            <Direction>
+              <CityName>Симферополь (Крым)</CityName>
+              <CountryName>Крым</CountryName>
+            </Direction>
+          </DirectionDescription>
+          <FlightOriginsList>
             <ListElement>
               <DetailsElement link>Из Москвы</DetailsElement>
               <DetailsElement>от 4 813 ₽</DetailsElement>
@@ -66,20 +65,20 @@ export default () => (
               <DetailsElement link>Из Челябинска</DetailsElement>
               <DetailsElement>от 9 148 ₽</DetailsElement>
             </ListElement>
-          </FlightOrigins>
-        </Offers>
+          </FlightOriginsList>
+        </Offer>
 
-        <Offers>
-          <Country_Prices>
+        <Offer>
+          <DirectionDescription>
             <Flag>
-              <Flags src={arm} alt="calendar" />
+              <FlagImage src={arm} alt="calendar" />
             </Flag>
-            <Country_Text>
-              <Town_Text>Ереван</Town_Text>
-              <CountryText>АРМЕНИЯ</CountryText>
-            </Country_Text>
-          </Country_Prices>
-          <FlightOrigins>
+            <Direction>
+              <CityName>Ереван</CityName>
+              <CountryName>АРМЕНИЯ</CountryName>
+            </Direction>
+          </DirectionDescription>
+          <FlightOriginsList>
             <ListElement>
               <DetailsElement link>Из Москвы</DetailsElement>
               <DetailsElement>от 6 758 ₽</DetailsElement>
@@ -100,20 +99,20 @@ export default () => (
               <DetailsElement link>Из Ростова-на-Дону</DetailsElement>
               <DetailsElement>от 11 956 ₽</DetailsElement>
             </ListElement>
-          </FlightOrigins>
-        </Offers>
+          </FlightOriginsList>
+        </Offer>
 
-        <Offers last>
-          <Country_Prices>
+        <Offer last>
+          <DirectionDescription>
             <Flag>
-              <Flags src={mol} alt="calendar" />
+              <FlagImage src={mol} alt="calendar" />
             </Flag>
-            <Country_Text>
-              <Town_Text>Кишинёв</Town_Text>
-              <CountryText>МОЛДАВИЯ</CountryText>
-            </Country_Text>
-          </Country_Prices>
-          <FlightOrigins>
+            <Direction>
+              <CityName>Кишинёв</CityName>
+              <CountryName>МОЛДАВИЯ</CountryName>
+            </Direction>
+          </DirectionDescription>
+          <FlightOriginsList>
             <ListElement>
               <DetailsElement link>Из Москвы</DetailsElement>
               <DetailsElement>от 8 319 ₽</DetailsElement>
@@ -134,18 +133,18 @@ export default () => (
               <DetailsElement link>Из Нового Уренгоя</DetailsElement>
               <DetailsElement>от 15 987 ₽</DetailsElement>
             </ListElement>
-          </FlightOrigins>
-        </Offers>
+          </FlightOriginsList>
+        </Offer>
       </PopularCountries>
-      <MainText>
+      <CheapTickets>
         Мы знаем, где купить авиабилеты дешево. Билеты на самолет в 220 стран
         мира. Поиск и сравнение цен на авиабилеты среди 100 агентств и 728
         авиакомпаний.
-      </MainText>
-      <LittleText>
+      </CheapTickets>
+      <OfferWarning>
         Цены, найденные пользователями за последние 48 часов, не являются
         офертой.
-      </LittleText>
+      </OfferWarning>
     </div>
   </Container>
 );

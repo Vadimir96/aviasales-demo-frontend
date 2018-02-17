@@ -5,24 +5,24 @@ import icool from "./icool.svg";
 
 import {
   Container,
-  Paragraph_Text,
-  Paragraph_Card,
-  Paragraph_Head,
-  Paragraph_Icon,
-  Paragraph_Description,
-  Paragraph_Link
+  Article,
+  Card,
+  Head,
+  Icon,
+  Description,
+  Link
 } from "./styled";
 
 export default () => (
   <Container>
     <div className="container">
-      <Paragraph_Text>
-        <Paragraph_Card>
-          <Paragraph_Head>
-            <Paragraph_Icon src={icoplane} alt="plane" />
+      <Article>
+        <Card>
+          <Head>
+            <Icon src={icoplane} alt="plane" />
             КАК КУПИТЬ ДЕШЕВЫЕ АВИАБИЛЕТЫ?
-          </Paragraph_Head>
-          <Paragraph_Description>
+          </Head>
+          <Description>
             Aviasales.ru — это метапоисковик авиабилетов. Мы ищем билеты на
             самолет по сотням авиакомпаний и находим за считанные минуты самые
             дешевые авиабилеты. Чтобы купить авиабилет дешево, воспользуйтесь
@@ -33,16 +33,16 @@ export default () => (
             дешевые билеты на самолет в Европу, Азию и на другие континенты. Мы
             написали для вас простую инструкцию о том, как пользоваться поиском
             и экономить на перелетах от 1000 до 20 000 руб в год.
-            <Paragraph_Link> Подробнее</Paragraph_Link>
-          </Paragraph_Description>
-        </Paragraph_Card>
+            <Link> Подробнее</Link>
+          </Description>
+        </Card>
 
-        <Paragraph_Card>
-          <Paragraph_Head>
-            <Paragraph_Icon src={icoemail} alt="email" />
+        <Card>
+          <Head>
+            <Icon src={icoemail} alt="email" />
             ЭЛЕКТРОННЫЙ АВИАБИЛЕТ
-          </Paragraph_Head>
-          <Paragraph_Description>
+          </Head>
+          <Description>
             Электронный авиабилет — это, по сути, обычный билет на самолет, но
             только в менее привычном для путешественника виде. Вся информация об
             авиаперелете (данные пассажира, маршрут следования) хранится в
@@ -56,25 +56,25 @@ export default () => (
             личности точно так же, как предъявляют обыкновенный бумажный билет.
             Следует отметить, что электронный билет, приобретенный онлайн, стоит
             дешевле своего бумажного аналога.
-            <Paragraph_Link> Подробнее</Paragraph_Link>
-          </Paragraph_Description>
-        </Paragraph_Card>
+            <Link> Подробнее</Link>
+          </Description>
+        </Card>
 
-        <Paragraph_Card>
-          <Paragraph_Head>
-            <Paragraph_Icon src={icool} alt="ol" />
+        <Card>
+          <Head>
+            <Icon src={icool} alt="ol" />
             20 СОВЕТОВ АВИАПУТЕШЕСТВЕННИКАМ
-          </Paragraph_Head>
-          <Paragraph_Description>
+          </Head>
+          <Description>
             Есть масса путеводителей по странам, но ни одного о том, как
             провести время в самолете. Для того, чтобы сделать ваш перелет
             максимально комфортным, мы написали 20 советов о подготовке к
             путешествию. Ведь настоящее путешествие начинается со слов «Добро
             пожаловать на борт нашего самолета»!
-            <Paragraph_Link> Подробнее</Paragraph_Link>
-          </Paragraph_Description>
-        </Paragraph_Card>
-      </Paragraph_Text>
+            <Link> Подробнее</Link>
+          </Description>
+        </Card>
+      </Article>
     </div>
   </Container>
 );

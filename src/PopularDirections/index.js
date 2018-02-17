@@ -20,8 +20,8 @@ import pop_bg_6 from "./Group 10.png";
 import {
   Container,
   Compass,
-  PD_title,
-  City_name,
+  InviteText,
+  CityName,
   CityChoice,
   DirectionType,
   DirectionTypeUnit,
@@ -51,11 +51,11 @@ export default () => (
       <FondCompass>
         <Compass src={compass} alt="logo" />
       </FondCompass>
-      <PD_title>
-        Популярные направления перелетов из города<City_name>
+      <InviteText>
+        Популярные направления перелетов из города<CityName>
           Москва <CityChoice src={pencil} alt="logo" />
-        </City_name>
-      </PD_title>
+        </CityName>
+      </InviteText>
       <DirectionType>
         <DirectionTypeUnit>
           <DirectionTypeCard chosen>

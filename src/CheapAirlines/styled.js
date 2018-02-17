@@ -8,12 +8,12 @@ export const Container = styled.div`
     padding: 24px 8.5px 32px 8.5px;
   }
 `;
-export const AirlinesBlock = styled.div`
+export const Slider = styled.div`
   @media (min-width: 768px) {
     position: relative;
   }
 `;
-export const AirlinesHeader = styled.p`
+export const HeaderText = styled.p`
   @media (min-width: 768px) {
     ont-family: "Roboto";
     text-align: center;
@@ -26,23 +26,23 @@ export const AirlinesHeader = styled.p`
     color: #5c5c5c;
   }
 `;
-export const AirlinesBlockContent = styled.div`
+export const SliderContent = styled.div`
   @media (min-width: 768px) {
     margin: 24px 60px 0;
   }
 `;
-export const AirlinesSlideOne = styled.div`
+export const CompanyLogos = styled.div`
   @media (min-width: 768px) {
     text-align: center;
   }
 `;
-export const AirlinesSlideNav = styled.div`
+export const SliderDisplay = styled.div`
   @media (min-width: 768px) {
     text-align: center;
     margin-top: 20px;
   }
 `;
-export const AirlinesSlideNavOl = styled.span`
+export const SliderPosition = styled.span`
   @media (min-width: 768px) {
     display: inline-block;
     cursor: pointer;
@@ -55,13 +55,13 @@ export const AirlinesSlideNavOl = styled.span`
     margin-right: 8px;
   }
 `;
-export const AirlinesSlideLogotypes = styled.img`
+export const SlideLogotypes = styled.img`
   @media (min-width: 768px) {
     vertical-align: middle;
     margin: 11px 25px 0;
   }
 `;
-export const AirlinesSlideDirection = styled.img`
+export const SlideDirection = styled.img`
   @media (min-width: 768px) {
     position: absolute;
     cursor: pointer;
