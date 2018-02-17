@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import band from "./images/Rectangle 3-1.png";
+import band from "./Rectangle 3-1.png";
 
-export const MainDispatch = styled.div`
+export const Container = styled.div`
   background: #ffffff;
   font-family: "Roboto";
   display: none;
@@ -10,18 +10,32 @@ export const MainDispatch = styled.div`
     display: block;
   }
 `;
+export const OverflowBlock = styled.div`
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    background: url(${band}) 51% 0;
+    background-repeat-y: no-repeat;
+    height: 9px;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+`;
+
 export const DispatchBlock = styled.div`
   position: relative;
   @media (min-width: 768px) {
-    &::after {
-      content: "";
-      position: absolute;
-      background: url(${band}) 51% 0;
-      background-repeat-y: no-repeat;
-      height: 9px;
-      top: 0;
-      right: 0;
-      left: 0;
+  }
+    @media (min-width: 1440px) {
+      display: flex;
+      align-items: center;
+
+      &:nth-child(2) {
+        text-align: right;
+        padding-right: 25px;
+      }
     }
   }
 `;
@@ -30,8 +44,12 @@ export const DispatchTextBlock = styled.div`
     padding: 32px 0 0;
     margin: 0 30%;
   }
+  @media (min-width: 1440px) {
+    margin: 0;
+    flex: 1 20%;
+  }
 `;
-export const DispatchHeader = styled.h3`
+export const DispatchHeader = styled.p`
   @media (min-width: 768px) {
     font-style: normal;
     font-weight: bold;
@@ -40,8 +58,11 @@ export const DispatchHeader = styled.h3`
     text-align: center;
     color: #5c5c5c;
   }
+  @media (min-width: 1440px) {
+    text-align: left;
+  }
 `;
-export const DispatchTextwishes = styled.h4`
+export const DispatchTextwishes = styled.p`
   @media (min-width: 768px) {
     font-style: normal;
     font-weight: normal;
@@ -51,6 +72,9 @@ export const DispatchTextwishes = styled.h4`
     text-align: center;
     color: #5c5c5c;
   }
+  @media (min-width: 1440px) {
+    text-align: left;
+  }
 `;
 export const DispatchList = styled.ul`
   @media (min-width: 768px) {
@@ -58,6 +82,11 @@ export const DispatchList = styled.ul`
     text-align: center;
     margin-top: 20px;
     padding: 0;
+  }
+  @media (min-width: 1440px) {
+    flex: 1 20%;
+    text-align: right;
+    padding-right: 16px;
   }
 `;
 export const DispatchListSocial = styled.li`
@@ -78,6 +107,11 @@ export const DispatchSendBlock = styled.div`
   @media (min-width: 768px) {
     text-align: center;
     margin: 0 30%;
+  }
+  @media (min-width: 1440px) {
+    text-align: center;
+    margin: 0;
+    flex: 1 20%;
   }
 `;
 export const DispatchField = styled.input`

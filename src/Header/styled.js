@@ -1,12 +1,12 @@
 import styled from "styled-components";
-import logo from "./images/logo.svg";
-import plane from "./images/aero-2.svg";
-import calendar from "./images/calendar.svg";
-import arrowleft from "./images/arrowleft.svg";
-import arrowright from "./images/arrowright.svg";
-import downarrow from "./images/downarrow.svg";
-export const Aviasales = styled.div``;
-export const Bg = styled.header`
+import logo from "./logo.svg";
+import plane from "./aero-2.svg";
+import calendar from "./calendar.svg";
+import arrowleft from "./arrowleft.svg";
+import arrowright from "./arrowright.svg";
+import downarrow from "./downarrow.svg";
+
+export const Container = styled.header`
   background: linear-gradient(
     148.48deg,
     #00b0de 22.46%,
@@ -16,10 +16,35 @@ export const Bg = styled.header`
     #02abdb 33.81%,
     #196ebd 122.26%
   );
-  padding: 40px 6px;
+  padding: 10px 0 60px 0;
+  @media (min-width: 768px) {
+    background: linear-gradient(
+      126.97deg,
+      #00b0de -13.66%,
+      #01aedc -9.98%,
+      #02abdb -6.26%,
+      #02abdb -2.56%,
+      #02abdb -2.34%,
+      #196ebd 85.88%
+    );
+  }
+  @media (min-width: 1440px) {
+    background: linear-gradient(
+      119.26deg,
+      #00b0de -25.78%,
+      #01aedc -22.1%,
+      #02abdb -18.38%,
+      #02abdb -14.68%,
+      #02abdb -14.46%,
+      #196ebd 73.68%
+    );
+  }
 `;
 
-export const LogoLink = styled.a`
+export const LogoLink = styled.a``;
+export const BlockLogo = styled.div`
+  position: relative;
+  max-width: 1224px;
   &::before {
     content: "";
     position: absolute;
@@ -56,8 +81,11 @@ export const Date = styled.div`
     flex-direction: row;
     flex: 1 48%;
   }
+  @media (min-width: 1440px) {
+    flex: 1 24%;
+  }
 `;
-export const Text = styled.h1`
+export const Text = styled.p`
   font-family: "Roboto", sans-serif;
   font-size: 20px;
   font-style: medium;
@@ -66,18 +94,44 @@ export const Text = styled.h1`
   color: white;
   padding: 48px 6px 16px;
   margin: 0;
-`;
-
-export const Form_block = styled.form`
   @media (min-width: 768px) {
-    padding: 0 60px;
+    font-weight: bold;
+    line-height: 48px;
+    font-size: 32px;
+    padding: 48px 6px 8px;
+  }
+  @media (min-width: 1440px) {
+    font-weight: bold;
+    font-size: 40px;
+    padding: 110px 6px 8px;
   }
 `;
-export const Info_block = styled.div`
+export const Process = styled.p`
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  font-size: 20px;
+  text-align: center;
+  color: #ffffff;
+  display: none;
+  @media (min-width: 768px) {
+    display: block;
+    margin-top: 0;
+  }
+  @media (min-width: 1440px) {
+    font-weight: bold;
+    font-size: 24px;
+    padding-bottom: 40px;
+  }
+`;
+
+export const FlightOrder = styled.form``;
+export const CustomerData = styled.div`
   display: flex;
   flex-flow: row wrap;
 `;
-export const Formgroup = styled.div`
+export const Group = styled.div`
   flex: ${props => (props.city ? "2 100%" : "1 0px")};
   position: relative;
   margin-bottom: 2px;
@@ -87,16 +141,20 @@ export const Formgroup = styled.div`
     justify-content: center;
     display: ${props => (props.center ? "flex" : "")};
   }
+  @media (min-width: 1440px) {
+    flex: ${props => (props.city ? "1 24%;" : "1 0px")};
+    margin-right: ${props => (props.cityarrival ? "2px;" : "")};
+  }
 `;
-export const FormCountry = Formgroup.extend`
+export const Country = Group.extend`
   @media (min-width: 768px) {
     margin-right: 2px;
   }
 `;
-export const FormDate = Formgroup.extend`
+export const FlightDate = Group.extend`
   margin-right: ${props => (props.date ? "2px" : "0px")};
 `;
-export const FormTickt = Formgroup.extend`
+export const FormTickt = Group.extend`
   @media (min-width: 768px) {
     margin-left: 2px;
   }
@@ -142,7 +200,7 @@ export const Swaparrows = styled.div`
     left: 2px;
   }
 `;
-export const Textfield = styled.input`
+export const PassengerData = styled.input`
   width: 100%;
   color: #4a4a4a;
   position: relative;
@@ -157,6 +215,9 @@ export const Textfield = styled.input`
   border-radius: ${props => (props.top ? "4px 4px 0 0" : "0px")};
   @media (min-width: 768px) {
     border-radius: 0;
+  }
+  @media (min-width: 768px) {
+    padding-right: 34px;
   }
 `;
 export const Calendar_block = styled.div`
@@ -211,7 +272,7 @@ export const Flightbutton = styled.button`
   position: relative;
   background-color: #ff9241;
   border-radius: 4px;
-  font-size: 24px;
+  font-size: 22px;
   font-family: "Roboto", sans-serif;
   line-height: 28px;
   font-weight: 900;
@@ -235,5 +296,9 @@ export const Flightbutton = styled.button`
   }
   @media (min-width: 768px) {
     width: auto;
+    margin: 40px 0 40px 0;
+  }
+  @media (min-width: 1440px) {
+    font-size: 28px;
   }
 `;

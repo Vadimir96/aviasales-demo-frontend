@@ -1,6 +1,5 @@
 import styled from "styled-components";
-
-export const AirlinesMain = styled.div`
+export const Container = styled.div`
   background: #ffffff;
   display: none;
   font-family: "Roboto";
@@ -14,7 +13,7 @@ export const AirlinesBlock = styled.div`
     position: relative;
   }
 `;
-export const AirlinesHeader = styled.h1`
+export const AirlinesHeader = styled.p`
   @media (min-width: 768px) {
     ont-family: "Roboto";
     text-align: center;

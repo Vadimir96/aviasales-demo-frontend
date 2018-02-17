@@ -1,4 +1,63 @@
 import styled from "styled-components";
+export const Container = styled.div`
+  background-color: white;
+`;
+export const Footer_top = styled.div`
+  padding: 1px 6px 24px 6px;
+  display: flex;
+  flex-flow: row wrap;
+  border-bottom: 1px solid #e0e6e8;
+  box-sizing: border-box;
+  @media (min-width: 768px) {
+    padding: 1px 11px 24px 11px;
+  }
+`;
+
+export const Footer_top_block = styled.div`
+  flex: 1 50%;
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 768px) {
+    flex: 1 25%;
+    &:last-child {
+      flex: 1 75%;
+    }
+  }
+  @media (min-width: 1440px) {
+    flex: 1 auto;
+    &:last-child {
+      flex: 1 auto;
+    }
+  }
+`;
+
+export const Footer_top_block_name = styled.p`
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+  font-size: 12px;
+  color: #4a4a4a;
+  margin: 0px;
+  padding-top: 31px;
+  padding-bottom: 16px;
+`;
+
+export const Footer_top_block_element = styled.a`
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 16px;
+  font-size: 12px;
+  color: #5b5b5c;
+  margin: 0px;
+  padding-bottom: 12px;
+`;
+
+export const Footer_top_block_extension = Footer_top_block_name.extend`
+  padding-bottom: 0px;
+  padding-top: 4px;
+`;
 
 export const Footer_block = styled.div`
   background: #ffffff;
@@ -6,6 +65,11 @@ export const Footer_block = styled.div`
   font-family: "Roboto";
   @media (min-width: 768px) {
     padding: 24px 11px 24px 11px;
+  }
+  @media (min-width: 1440px) {
+    padding: 48px 0 50px 0;
+    display: flex;
+    justify-content: space-between;
   }
 `;
 
@@ -63,8 +127,11 @@ export const Footer_Content_Link_Buttons_Block = styled.div`
   @media (min-width: 768px) {
     flex-direction: row;
   }
+  @media (min-width: 1440px) {
+    margin-top: 0;
+  }
 `;
-
+export const Footer_Content_Block_Buttons = styled.div``;
 export const Footer_Content_Link_Button = Footer_Content_Link.extend`
   display: block;
   margin: 5px auto;
@@ -96,7 +163,7 @@ export const Footer_Content_Link_Button_Txt = styled.div`
   display: inline-block;
 `;
 
-export const Footer_Content_Link_Button_Txt_small = styled.h1`
+export const Footer_Content_Link_Button_Txt_small = styled.p`
   font-style: normal;
   font-weight: normal;
   line-height: 15px;
@@ -114,7 +181,7 @@ export const Footer_Content_Link_Button_Txt_bold = Footer_Content_Link_Button_Tx
   margin: 0 0 0 0;
 `;
 
-export const Footer_Content_end = styled.h1`
+export const Footer_Content_end = styled.p`
   font-style: normal;
   font-weight: normal;
   line-height: 16px;

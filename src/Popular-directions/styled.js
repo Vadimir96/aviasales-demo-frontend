@@ -1,13 +1,8 @@
 import styled from "styled-components";
-
-export const Pop_dir = styled.div`
+export const Container = styled.div`
   background-color: #f8fcff;
-  padding-top: 53px;
-  padding-right: 6px;
-  padding-left: 6px;
+  padding-top: 30px;
   @media (min-width: 768px) {
-    padding-left: 20%;
-    padding-right: 20%;
   }
 `;
 export const FondCompass = styled.div`
@@ -22,7 +17,7 @@ export const Compass = styled.img`
   display: flex;
   margin: 0px auto;
 `;
-export const PD_title = styled.h1`
+export const PD_title = styled.p`
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
@@ -38,7 +33,7 @@ export const City_name = PD_title.extend`
   padding-top: 0px;
   margin-top: 0px;
 `;
-export const Pencil = styled.img`
+export const CityChoice = styled.img`
   margin-left: 8px;
 `;
 
@@ -46,16 +41,21 @@ export const Underline = styled.img`
   margin-bottom: 9px;
 `;
 
-export const List = styled.ul`
+export const DirectionType = styled.ul`
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
   list-style-type: none;
   padding: 0px;
+
+  @media (min-width: 1200px) {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
 `;
 
-export const List_unit = styled.li`
+export const DirectionTypeUnit = styled.li`
   box-sizing: border-box;
   flex: 1 33%;
 
@@ -64,20 +64,20 @@ export const List_unit = styled.li`
   }
 `;
 
-export const List_div = styled.div`
+export const DirectionTypeCard = styled.div`
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
 `;
 
-export const List_img = styled.img`
+export const DirectionTypeImg = styled.img`
   display: flex;
   margin: auto;
   align-self: center;
 `;
 
-export const List_text = styled.h3`
+export const DirectionTypeText = styled.p`
   box-sizing: border-box;
   max-width: 64px;
   margin-top: 2px;
@@ -98,9 +98,12 @@ export const Cardholder = styled.div`
   justify-content: center;
   align-items: center;
   background-color: #f8fcff;
-  padding: 0 20%;
+
   @media (min-width: 768px) {
-    padding: 0;
+  }
+  @media (min-width: 1440px) {
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 `;
 
@@ -111,9 +114,13 @@ export const Card = styled.div`
   justify-content: space-between;
   border-radius: 0 0 8px 8px;
   box-shadow: 0px 2px 12px rgba(0, 75, 93, 0.12);
+  width: 100%;
   min-width: 308px;
   @media (min-width: 768px) {
-    width: 100%;
+  }
+  @media (min-width: 1440px) {
+    flex: 1 49%;
+    ${props => (props.card ? "margin-right: 1%;" : "")};
   }
 `;
 
@@ -151,7 +158,7 @@ export const PopInfoBlock = styled.div`
   justify-content: flex-end;
 `;
 
-export const PopCityName = styled.h1`
+export const PopCityName = styled.p`
   margin: 16px 16px 4px 10px;
   font-family: "Roboto";
   font-style: normal;
@@ -162,7 +169,7 @@ export const PopCityName = styled.h1`
   color: #5b5b5c;
 `;
 
-export const PopCityCountry = styled.h1`
+export const PopCityCountry = styled.p`
   margin: 0px 0px 12px 10px;
   font-family: "Roboto";
   font-style: normal;
@@ -173,7 +180,7 @@ export const PopCityCountry = styled.h1`
   color: #a0b0b9;
 `;
 
-export const PopCityPrice = styled.h1`
+export const PopCityPrice = styled.p`
   margin: 16px 10px 4px 0;
   font-family: "Roboto";
   font-style: normal;
@@ -185,7 +192,7 @@ export const PopCityPrice = styled.h1`
   color: #00bae8;
 `;
 
-export const PopCityDate = styled.h1`
+export const PopCityDate = styled.p`
   margin: 0px 10px 12px 0px;
   font-family: "Roboto";
   font-style: normal;

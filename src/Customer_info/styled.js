@@ -1,6 +1,5 @@
 import styled from "styled-components";
-
-export const Paragraph_block = styled.div`
+export const Container = styled.div`
   background: #ffffff;
   padding: 30px 6px 10px;
   @media (min-width: 768px) {
@@ -9,7 +8,7 @@ export const Paragraph_block = styled.div`
 `;
 export const Paragraph_Text = styled.div``;
 export const Paragraph_Card = styled.div``;
-export const Paragraph_Head = styled.h3`
+export const Paragraph_Head = styled.p`
   text-transform: uppercase;
   line-height: 18px;
   font-size: 13px;

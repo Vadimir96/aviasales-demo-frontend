@@ -1,6 +1,5 @@
 import styled from "styled-components";
-
-export const Sp_off = styled.div`
+export const Container = styled.div`
   background: linear-gradient(162.96deg, #00b0de 41.41%, #196ebd 141.41%);
   padding: 16px 6px 24px 6px;
 
@@ -9,7 +8,7 @@ export const Sp_off = styled.div`
   }
 `;
 
-export const Sp_off_h_text = styled.h1`
+export const Sp_off_h_text = styled.p`
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
@@ -29,7 +28,7 @@ export const Sp_off_cardholder = styled.div`
 
   @media (min-width: 768px) {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
   }
 `;
 
@@ -39,6 +38,10 @@ export const Sp_off_card = styled.div`
   width: 308px;
   @media (min-width: 768px) {
     width: 240px;
+    margin-right: 2%;
+    &:last-child {
+      margin-right: 0;
+    }
   }
 `;
 
@@ -52,7 +55,7 @@ export const Sp_off_card_header = styled.div`
   background-color: #cd2027;
 `;
 
-export const Sp_off_card_head_text = styled.h1`
+export const Sp_off_card_head_text = styled.p`
   margin: 10px auto 8px 0px;
   font-family: "Roboto";
   font-style: normal;
@@ -88,7 +91,7 @@ export const Sp_off_card_pic = styled.img`
   }
 `;
 
-export const Sp_off_card_prefix = styled.h1`
+export const Sp_off_card_prefix = styled.p`
   font-family: "Roboto";
   font-style: normal;
   font-weight: normal;
@@ -111,7 +114,7 @@ export const Sp_off_card_price = styled.span`
   margin: 18px 8px 0 0;
 `;
 
-export const Sp_off_card_exp_date = styled.h1`
+export const Sp_off_card_exp_date = styled.p`
   margin: 8px 8px 0 0;
   font-family: "Roboto";
   font-style: normal;
@@ -176,7 +179,7 @@ export const Sp_off_link_below = styled.a`
   }
 `;
 
-export const Sp_off_text_below_starred = styled.h1`
+export const Sp_off_text_below_starred = styled.p`
   margin: 0 26px 0 26px;
   font-family: Roboto;
   font-style: normal;

@@ -1,6 +1,5 @@
 import styled from "styled-components";
-
-export const Best_Prices = styled.div`
+export const Container = styled.div`
   background: linear-gradient(180deg, #f8fcff 0%, #ffffff 100%);
   padding: 30px 6px 10px;
 
@@ -8,21 +7,35 @@ export const Best_Prices = styled.div`
     padding: 30px 72px 10px;
   }
 `;
-export const Card_Best_Prices = styled.div`
+export const PopularCountries = styled.div`
+  @media (min-width: 1440px) {
+    display: flex;
+    justify-content: space-between;
+  }
+`;
+export const Offers = styled.div`
   display: flex;
   flex-flow: column wrap;
   justify-content: space-around;
-  border-bottom: ${props => (props.last ? "" : "1px solid #afbec6")};
+  border-bottom: ${props => (props.last ? "" : "1px dashed #afbec6")};
   margin: ${props => (props.last ? "0 auto 40px" : "0 auto 50px")};
   padding-bottom: 24px;
+
+  @media (min-width: 1440px) {
+    margin: 0;
+    flex: 1 auto;
+    padding: 0 44px 0 44px;
+    border-right: ${props => (props.last ? "" : "1px dashed #afbec6")};
+    border-bottom: 0;
+  }
 `;
-export const Calendar_Prices = styled.div`
+export const Calendar = styled.div`
   margin-bottom: 20px;
   text-align: center;
 `;
 export const Calendaricon = styled.img``;
 
-export const Calendarheader = styled.h1`
+export const Calendarheader = styled.p`
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   line-height: 24px;
@@ -41,8 +54,8 @@ export const Countryblock = styled.div``;
 export const Country_Prices = styled.div`
   margin-bottom: 24px;
 `;
-export const Countryimages = styled.img``;
-export const Countryimage = styled.div`
+export const Flags = styled.img``;
+export const Flag = styled.div`
   display: inline-block;
   width: 40px;
   margin-right: 5px;
@@ -51,7 +64,7 @@ export const Countryimage = styled.div`
 export const Country_Text = styled.div`
   display: inline-block;
 `;
-export const Town_Text = styled.h3`
+export const Town_Text = styled.p`
   font-weight: bold;
   font-family: "Roboto", sans-serif;
   line-height: 32px;
@@ -59,7 +72,7 @@ export const Town_Text = styled.h3`
   margin: 0;
   color: #5b5b5c;
 `;
-export const CountryText = styled.h5`
+export const CountryText = styled.p`
   font-weight: 500;
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
@@ -69,8 +82,8 @@ export const CountryText = styled.h5`
   color: #a0b0b9;
 `;
 
-export const List_Country = styled.div``;
-export const ElementList = styled.div`
+export const FlightOrigins = styled.div``;
+export const ListElement = styled.div`
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
@@ -86,7 +99,7 @@ export const DetailsElement = styled.a`
   font-size: 16px;
   text-decoration: none;
 `;
-export const MainText = styled.h4`
+export const MainText = styled.p`
   font-family: "Roboto", sans-serif;
   line-height: 24px;
   font-size: 16px;
@@ -96,8 +109,12 @@ export const MainText = styled.h4`
   @media (min-width: 768px) {
     line-height: 26px;
   }
+  @media (min-width: 1440px) {
+    width: 60%;
+    margin: 80px auto 0;
+  }
 `;
-export const LittleText = styled.h5`
+export const LittleText = styled.p`
   font-family: "Roboto", sans-serif;
   line-height: 20px;
   font-size: 14px;

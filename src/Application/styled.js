@@ -1,9 +1,10 @@
 import styled from "styled-components";
-import phoneSmall from "./images/phone320.png";
-import phoneMedium from "./images/phone768.png";
-import phoneLarge from "./images/phone1440.png";
 
-export const Application_block = styled.div`
+import phoneSmall from "./phone320.png";
+import phoneMedium from "./phone768.png";
+import phoneLarge from "./phone1440.png";
+
+export const Container = styled.div`
   background: linear-gradient(137.4deg, #00b0de 4.18%, #196ebd 104.18%);
 
   font-family: "Roboto";
@@ -30,6 +31,14 @@ export const ApplicationInd = styled.div`
       right: 65%;
     }
   }
+  @media (min-width: 1440px) {
+    padding-bottom: 0;
+    &::before {
+      width: 234px;
+      height: 308px;
+      background: url(${phoneLarge}) no-repeat;
+    }
+  }
 `;
 export const ApplicationPhone = styled.img`
   position: absolute;
@@ -51,7 +60,7 @@ export const ApplicationContent = styled.div`
     margin: 0 0 0 38%;
   }
 `;
-export const ApplicatioText = styled.h1`
+export const ApplicatioText = styled.p`
   font-family: "Roboto";
   font-weight: 500;
   line-height: normal;
@@ -64,7 +73,7 @@ export const ApplicatioText = styled.h1`
     font-size: 32px;
   }
 `;
-export const RatingText = styled.h5`
+export const RatingText = styled.p`
   font-family: "Roboto";
   font-weight: normal;
   line-height: 20px;
