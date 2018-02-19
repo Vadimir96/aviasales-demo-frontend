@@ -6,64 +6,62 @@ import invdispatch from "./invdispatch.svg";
 
 import {
   Container,
-  DispatchBlock,
+  InviteText,
   OverflowBlock,
-  DispatchTextBlock,
-  DispatchHeader,
-  DispatchTextwishes,
-  DispatchList,
-  DispatchListSocial,
-  DispatchListSocialLink,
-  DispatchListSocialLinkImg,
-  DispatchSendBlock,
-  DispatchField,
-  DispatchForm,
-  DispatchFormButton
+  TextBlock,
+  Header,
+  HowToSubscribe,
+  SocialMedia,
+  ListUnit,
+  Link,
+  LinkImg,
+  SendBlock,
+  Email,
+  Submit,
+  SubmitButton
 } from "./styled";
 
 export default () => (
   <Container>
     <OverflowBlock>
       <div className="container">
-        <DispatchBlock>
-          <DispatchTextBlock>
-            <DispatchHeader>
-              Хотите знать всё о скидках на авиабилеты?
-            </DispatchHeader>
-            <DispatchTextwishes>
+        <InviteText>
+          <TextBlock>
+            <Header>Хотите знать всё о скидках на авиабилеты?</Header>
+            <HowToSubscribe>
               Вы можете подписаться на нашу рассылку через соцсети или по
               электронной почте.
-            </DispatchTextwishes>
-          </DispatchTextBlock>
-          <DispatchList>
-            <DispatchListSocial>
-              <DispatchListSocialLink>
-                <DispatchListSocialLinkImg src={twitdispatch} />
-              </DispatchListSocialLink>
-            </DispatchListSocial>
-            <DispatchListSocial>
-              <DispatchListSocialLink>
-                <DispatchListSocialLinkImg src={facedispatch} />
-              </DispatchListSocialLink>
-            </DispatchListSocial>
-            <DispatchListSocial>
-              <DispatchListSocialLink>
-                <DispatchListSocialLinkImg src={vkdispatch} />
-              </DispatchListSocialLink>
-            </DispatchListSocial>
-            <DispatchListSocial>
-              <DispatchListSocialLink>
-                <DispatchListSocialLinkImg src={invdispatch} />
-              </DispatchListSocialLink>
-            </DispatchListSocial>
-          </DispatchList>
-          <DispatchSendBlock>
-            <DispatchForm>
-              <DispatchField placeholder="Ваш email" />
-              <DispatchFormButton>Подписаться</DispatchFormButton>
-            </DispatchForm>
-          </DispatchSendBlock>
-        </DispatchBlock>
+            </HowToSubscribe>
+          </TextBlock>
+          <SocialMedia>
+            <ListUnit>
+              <Link>
+                <LinkImg src={twitdispatch} />
+              </Link>
+            </ListUnit>
+            <ListUnit>
+              <Link>
+                <LinkImg src={facedispatch} />
+              </Link>
+            </ListUnit>
+            <ListUnit>
+              <Link>
+                <LinkImg src={vkdispatch} />
+              </Link>
+            </ListUnit>
+            <ListUnit>
+              <Link>
+                <LinkImg src={invdispatch} />
+              </Link>
+            </ListUnit>
+          </SocialMedia>
+          <SendBlock>
+            <Submit>
+              <Email placeholder="Ваш email" />
+              <SubmitButton>Подписаться</SubmitButton>
+            </Submit>
+          </SendBlock>
+        </InviteText>
       </div>
     </OverflowBlock>
   </Container>

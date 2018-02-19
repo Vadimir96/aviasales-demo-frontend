@@ -24,7 +24,7 @@ export const OverflowBlock = styled.div`
   }
 `;
 
-export const DispatchBlock = styled.div`
+export const InviteText = styled.div`
   position: relative;
   @media (min-width: 768px) {
   }
@@ -39,7 +39,7 @@ export const DispatchBlock = styled.div`
     }
   }
 `;
-export const DispatchTextBlock = styled.div`
+export const TextBlock = styled.div`
   @media (min-width: 768px) {
     padding: 32px 0 0;
     margin: 0 30%;
@@ -49,7 +49,7 @@ export const DispatchTextBlock = styled.div`
     flex: 1 20%;
   }
 `;
-export const DispatchHeader = styled.p`
+export const Header = styled.p`
   @media (min-width: 768px) {
     font-style: normal;
     font-weight: bold;
@@ -62,7 +62,7 @@ export const DispatchHeader = styled.p`
     text-align: left;
   }
 `;
-export const DispatchTextwishes = styled.p`
+export const HowToSubscribe = styled.p`
   @media (min-width: 768px) {
     font-style: normal;
     font-weight: normal;
@@ -76,7 +76,7 @@ export const DispatchTextwishes = styled.p`
     text-align: left;
   }
 `;
-export const DispatchList = styled.ul`
+export const SocialMedia = styled.ul`
   @media (min-width: 768px) {
     list-style: none;
     text-align: center;
@@ -89,21 +89,21 @@ export const DispatchList = styled.ul`
     padding-right: 16px;
   }
 `;
-export const DispatchListSocial = styled.li`
+export const ListUnit = styled.li`
   @media (min-width: 768px) {
     display: inline-block;
     margin: 0 3px;
   }
 `;
-export const DispatchListSocialLink = styled.a`
+export const Link = styled.a`
   @media (min-width: 768px) {
   }
 `;
-export const DispatchListSocialLinkImg = styled.img`
+export const LinkImg = styled.img`
   @media (min-width: 768px) {
   }
 `;
-export const DispatchSendBlock = styled.div`
+export const SendBlock = styled.div`
   @media (min-width: 768px) {
     text-align: center;
     margin: 0 30%;
@@ -114,7 +114,7 @@ export const DispatchSendBlock = styled.div`
     flex: 1 20%;
   }
 `;
-export const DispatchField = styled.input`
+export const Email = styled.input`
   @media (min-width: 768px) {
     font-family: "Roboto";
     background: #ffffff;
@@ -130,12 +130,12 @@ export const DispatchField = styled.input`
     width: 100%;
   }
 `;
-export const DispatchForm = styled.form`
+export const Submit = styled.form`
   @media (min-width: 768px) {
     position: relative;
   }
 `;
-export const DispatchFormButton = styled.button`
+export const SubmitButton = styled.button`
   @media (min-width: 768px) {
     font-family: "Roboto";
     background: #ff8e41;

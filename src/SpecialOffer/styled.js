@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 export const Container = styled.div`
   background: linear-gradient(162.96deg, #00b0de 41.41%, #196ebd 141.41%);
   padding: 16px 6px 24px 6px;
@@ -8,7 +9,7 @@ export const Container = styled.div`
   }
 `;
 
-export const Sp_off_h_text = styled.p`
+export const InviteText = styled.p`
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
@@ -18,7 +19,7 @@ export const Sp_off_h_text = styled.p`
   color: #ffffff;
 `;
 
-export const Sp_off_cardholder = styled.div`
+export const CardHolder = styled.div`
   margin-top: 15px;
   display: flex;
   flex-direction: column;
@@ -28,11 +29,11 @@ export const Sp_off_cardholder = styled.div`
 
   @media (min-width: 768px) {
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
   }
 `;
 
-export const Sp_off_card = styled.div`
+export const Card = styled.div`
   width: inherit;
   margin: 0 0 12px 0;
   width: 308px;
@@ -45,7 +46,7 @@ export const Sp_off_card = styled.div`
   }
 `;
 
-export const Sp_off_card_header = styled.div`
+export const CardHeader = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -55,7 +56,7 @@ export const Sp_off_card_header = styled.div`
   background-color: #cd2027;
 `;
 
-export const Sp_off_card_head_text = styled.p`
+export const CardInvite = styled.p`
   margin: 10px auto 8px 0px;
   font-family: "Roboto";
   font-style: normal;
@@ -68,30 +69,30 @@ export const Sp_off_card_head_text = styled.p`
   text-overflow: ellipsis;
 `;
 
-export const Sp_off_card_header_pic = styled.img``;
+export const CompanyLogo = styled.img``;
 
-export const Sp_off_card_filler = styled.div`
+export const Content = styled.div`
   background-color: #ffffff;
   padding: 0 8px 16px 8px;
 `;
 
-export const Sp_off_card_filler_top = styled.div`
+export const Offer = styled.div`
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: flex-start;
 `;
 
-export const Sp_off_card_filler_top_text = styled.div``;
+export const OfferText = styled.div``;
 
-export const Sp_off_card_pic = styled.img`
+export const CompanyLabel = styled.img`
   margin: 22px 0 0 8px;
   @media (min-width: 768px) {
     width: 100px;
   }
 `;
 
-export const Sp_off_card_prefix = styled.p`
+export const PricePrefix = styled.p`
   font-family: "Roboto";
   font-style: normal;
   font-weight: normal;
@@ -103,7 +104,7 @@ export const Sp_off_card_prefix = styled.p`
   color: #5c5c5c;
 `;
 
-export const Sp_off_card_price = styled.span`
+export const Price = styled.span`
   font-family: "Roboto";
   font-style: normal;
   font-weight: normal;
@@ -114,7 +115,7 @@ export const Sp_off_card_price = styled.span`
   margin: 18px 8px 0 0;
 `;
 
-export const Sp_off_card_exp_date = styled.p`
+export const ExpDate = styled.p`
   margin: 8px 8px 0 0;
   font-family: "Roboto";
   font-style: normal;
@@ -126,7 +127,7 @@ export const Sp_off_card_exp_date = styled.p`
   color: #d93633;
 `;
 
-export const Sp_off_card_desc = styled.p`
+export const OfferDescription = styled.p`
   font-family: "Roboto";
   font-style: normal;
   font-weight: normal;
@@ -137,7 +138,7 @@ export const Sp_off_card_desc = styled.p`
   color: #242424;
 `;
 
-export const Sp_off_card_button = styled.button`
+export const More = styled.button`
   margin: 27px 0 0 0;
   padding: 10px 0 10px 0;
   background: rgba(0, 0, 0, 0.0001);
@@ -154,7 +155,7 @@ export const Sp_off_card_button = styled.button`
   color: #d93533;
 `;
 
-export const Sp_off_text_below = styled.div`
+export const MoreCustomerInfo = styled.div`
   display: flex;
   flex-flow: column nowrap;
   @media (min-width: 768px) {
@@ -163,7 +164,7 @@ export const Sp_off_text_below = styled.div`
   }
 `;
 
-export const Sp_off_link_below = styled.a`
+export const AllOffers = styled.a`
   margin: 20px 28px 8px 28px;
   font-family: Roboto;
   font-style: normal;
@@ -179,7 +180,7 @@ export const Sp_off_link_below = styled.a`
   }
 `;
 
-export const Sp_off_text_below_starred = styled.p`
+export const PriceExplained = styled.p`
   margin: 0 26px 0 26px;
   font-family: Roboto;
   font-style: normal;

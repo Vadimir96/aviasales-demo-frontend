@@ -6,26 +6,26 @@ export const Container = styled.div`
     padding: 30px 8px 48px;
   }
 `;
-export const Paragraph_Text = styled.div``;
-export const Paragraph_Card = styled.div``;
-export const Paragraph_Head = styled.p`
+export const Article = styled.div``;
+export const Card = styled.div``;
+export const Head = styled.p`
   text-transform: uppercase;
   line-height: 18px;
   font-size: 13px;
   color: #4a4a4a;
 `;
-export const Paragraph_Icon = styled.img`
+export const Icon = styled.img`
   margin-right: 9px;
   box-sizing: border-box;
   vertical-align: top;
 `;
-export const Paragraph_Description = styled.p`
+export const Description = styled.p`
   line-height: 20px;
   font-size: 14px;
   color: #4a4a4a;
 `;
 
-export const Paragraph_Link = styled.a`
+export const Link = styled.a`
   text-decoration: none;
   line-height: 20px;
   font-size: 14px;
